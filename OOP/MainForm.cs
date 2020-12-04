@@ -44,12 +44,21 @@ namespace OOP
         private void btnViewBookMenu_Click(object sender, EventArgs e)
         {
             this.Hide();
+            SaveBooks();
             var viewBooksForm = new ViewBooksForm();
             while (viewBooksForm.viewBooksFinished == false)
             {
                 viewBooksForm.ShowDialog();
             }
             this.Show();
+        }
+
+        private void SaveBooks()
+        {
+            foreach(Book _book in NewBookForm.BookList)
+            {
+
+            }
         }
     }
 }
